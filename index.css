@@ -1,0 +1,145 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: #f1f1f1;
+    border: 2xp solid black;
+}
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+}
+.nav-items > ul > li {
+    padding: 10px;
+}
+.logo {
+    width: 100px;
+}
+
+.restraunt-card {
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .restraunt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .restraunt-card img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .restraunt-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .restraunt-details h2 {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .restraunt-details h4 {
+    background-color: green;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid darkgreen;
+  }
+  
+  .restraunt-card h3 {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 8px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+}
+
+.search-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .search-btn {
+        width: 100%;
+    }
+}
