@@ -5,13 +5,15 @@ import { Title } from "./components/Header"; //named export in react
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Contact from "./components/Contact";
+import Profile from "./components/Profile";
 
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
@@ -21,10 +23,26 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
